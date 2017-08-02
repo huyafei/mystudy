@@ -1,3 +1,6 @@
+<?php
+header('Content-Type: text/html;charset=UTF-8');
+?>
 <!-- 页面最底部-->
     <div class="footer-container">
         <div class="footer-wrap">

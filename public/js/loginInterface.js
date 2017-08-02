@@ -20,8 +20,7 @@ $("#header").on("click","#nav-register",function(e){
     $("#btnAL").removeClass("active")	;
     $("#btnRe").addClass("lf landing-re active");
 });
-
-$("#btnAL").click(function(e){
+$("#header").on("click","#btnAL",function(e){
     e.preventDefault();
     $("#modal-overlay .form-landing").css("display","block");
     $("#modal-overlay .form-register").css("display","none");
@@ -31,8 +30,7 @@ $("#btnAL").click(function(e){
     $(".user-reg>p").css("display","none");
     $(".pwd-red>p").css("display","none");
 });
-
-$("#btnRe").click(function(e){
+$("#header").on("click","#btnRe",function(e){
     e.preventDefault();
     $("#modal-overlay .form-landing").css("display","none");
     $("#modal-overlay .form-register").css("display","block");
@@ -42,8 +40,7 @@ $("#btnRe").click(function(e){
     $(".userp>p").css("display","none");
     $(".pwdp>p").css("display","none");
 });
-
-$("#btn-itmes").click(function(e){
+$("#header").on("click","#btn-itmes",function(e){
     e.preventDefault();
     $("#modal-overlay").css("display","none");
     $(".userp>p").css("display","none");

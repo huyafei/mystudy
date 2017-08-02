@@ -13,8 +13,7 @@ var pp=$(".pwdp>p");
 var reguname=/^(1[34578]\d{9})|(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
 //6-16为密码正则
 var regupwd=/^[0-9A-Za-z_]{6,16}$/;
-
-$("#uname").blur(function(){
+$("#header").on("blur","#uname",function(){
     var u1=$("#uname").val();
     if(!reguname.test(u1)){
         $(".userp>p").css("display","block");
@@ -25,7 +24,7 @@ $("#uname").blur(function(){
         return;
     }
 });
-$("#upwd").blur(function(){
+$("#header").on("blur","#upwd",function(){
     var p1=$("#upwd").val();
     if(p1===""){
         $(".pwdp>p").css("display","block");
@@ -34,7 +33,7 @@ $("#upwd").blur(function(){
 });
 
 //2.绑定单击事件
-$("#btn-landing").click(function(e){
+$("#header").on("click","#btn-landing",function(e){
     //阻止默认
     e.preventDefault();
 //获得用户用户名和密码
@@ -50,7 +49,6 @@ $("#btn-landing").click(function(e){
         alert("密码格式不正确");
         $(".userp>p").css("display","none");
         $(".pwdp>p").css("display","block");
-
         return;
     }
 //5:如果验证不能成功提示，终止程序

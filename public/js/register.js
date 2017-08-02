@@ -5,8 +5,7 @@
 var reguname=/^(1[34578]\d{9})|(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
 //6-16为密码正则
 var regupwd=/^[0-9A-Za-z_]{6,16}$/i;
-
-$("#zcuname").blur(function(){
+$("#header").on("blur","#zcuname",function(){
     var u = $("#zcuname").val();
     //if(u===""){
     //    $("div.user-reg>.userKong").css("display","block");
@@ -23,7 +22,7 @@ $("#zcuname").blur(function(){
         return;
     }
 });
-$("#zcupwd").blur(function(){
+$("#header").on("blur","#zcupwd",function(){
     var p =  $("#zcupwd").val();
     //if(p===""){
     //    $("div.pwd-red>.pwdKong").css("display","block");
@@ -43,8 +42,7 @@ $("#zcupwd").blur(function(){
     }
 });
 
-
-$("#btn-register").click(function(e){
+$("#header").on("click","#btn-register",function(e){
     e.preventDefault();
 //3:获取用户输入用户名和密码
     var u = $("#zcuname").val();

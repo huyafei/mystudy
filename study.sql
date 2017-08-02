@@ -11,9 +11,7 @@ set names gbk;
 insert into study_user values(null,'879649442@qq.com','hyf1223');
 insert into study_user values(null,'15190106827','hyf1223');
 insert into study_user values(null,'13812312345','hyf1223');
-CREATE TABLE study_msg(
 
-)
 set names gbk;
 CREATE TABLE msg(
   mid INT PRIMARY KEY AUTO_INCREMENT,
